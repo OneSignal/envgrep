@@ -1,0 +1,9 @@
+version: "3.1"
+
+services:
+  code:
+    image: "rust"
+    working_dir: "/code"
+    volumes:
+      - ".:/code"
+    entrypoint: tail -f /dev/null
