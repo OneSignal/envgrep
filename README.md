@@ -10,7 +10,7 @@ environment variables that are used for configuration: `SERVER_VERSION`,
 `SERVER_BIND_PORT`, and `SERVER_ID`. We can simulate this using a few `tail -f
 /dev/null` processes.
 
-```
+```bash
 $ env SERVER_VERSION=1.0.1 SERVER_ID=1 SERVER_BIND_PORT=:8080 tail -f /dev/null &
 [1] 1969
 $ env SERVER_VERSION=1.0.1 SERVER_ID=2 SERVER_BIND_PORT=:9090 tail -f /dev/null &
@@ -22,7 +22,7 @@ $ env SERVER_VERSION=1.0.1 SERVER_ID=3 SERVER_BIND_PORT=:8181 tail -f /dev/null 
 Now that these processes are running and have their variables set, we can search
 both keys and values using `envgrep`.
 
-```
+```bash
 # To find all configuration variables for all servers
 $ envgrep SERVER
 /proc/1969/environ (tail -f /dev/null):
@@ -62,7 +62,7 @@ SERVER_BIND_PORT = ":8181"
 `envgrep` is currently not packaged with any distro's package manager, so you
 must rely on `cargo` to compile and install from source.
 
-```
+```bash
 $ cargo install envgrep
 ```
 
