@@ -3,6 +3,12 @@ name = "envgrep"
 version = "0.1.0"
 authors = ["Lily Mara <lilymara@onesignal.com>"]
 edition = "2018"
+description = "Search through all processes environment variables on linux"
+readme = "README.md"
+license = "MIT"
+categories = [
+    "command-line-utilities",
+]
 
 [dependencies]
 glob = "0.3.0"
