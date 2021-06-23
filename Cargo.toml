@@ -6,6 +6,7 @@ edition = "2018"
 description = "Search through all processes environment variables on linux"
 readme = "README.md"
 license = "MIT"
+repository = "https://github.com/OneSignal/envgrep"
 categories = [
     "command-line-utilities",
 ]
